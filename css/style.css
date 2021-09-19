@@ -1,4 +1,17 @@
-/* Обнулення СТИЛів */
+/* Для шриштів: налаштування шрифта+кирилиця, підключаємо завжди! Чистимо непотрібні розміри шрифта в посиланні, для кращої оптимізації.
+ &display=swap&subset=cyrillic-ext */
+
+@import url("https://fonts.googleapis.com/css?family=Chivo:300,300italic,regular,italic,700,700italic&display=swap&subset=cyrillic-ext");
+
+@font-face {
+  font-family: "Polaris";
+  src: url("../fonts/Polaris.woff2") format("woff2"), url("../fonts/Polaris.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Обнулення СТИЛІВ */
 *,
 *::before,
 *::after {
@@ -28,65 +41,109 @@ h6 {
 img {
   vertical-align: top;
 }
+html {
+}
+body {
+  font-family: "Chivo", "Arial", sans-serif;
+  line-height: 2;
+}
+h1,
+h2,
+.main,
+.footer a {
+  font-family: "Polaris", serif;
+}
 /* --------------- */
 
-.container {
-  color: darkorange;
+/*.menu .nav a {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  color: #ff0000;
+}*/
+.menu a {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  color: #ff0000;
 }
-.container span {
-  color: springgreen;
-}
-.main_title h1 {
-  color: darkgreen;
-}
-#main {
-  color: palevioletred;
-}
-.main_text {
-  color: deeppink;
-}
-.main_paragraph {
-  color: red;
-}
-.examp {
-  color: darkred;
-}
-.examp span {
-  color: deeppink;
-}
-.history {
-  color: darkslategray;
-}
-.history span {
-  color: salmon;
-}
+
+/*.nav .navItalik {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  color: #ff0000;
+}*/
+
+/*.navItalik {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+}*/
+
+/*.nav a {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  color: #ff0000;
+}*/
 .content {
-  color: yellow;
 }
-.content li {
-  color: orangered;
+.mainTitle {
+  text-align: center;
 }
 .title {
-  color: green;
+  font-size: 22px;
+  font-weight: 700;
+  word-spacing: 5px;
 }
-.line li {
-  color: deeppink;
+
+.title span {
+  text-shadow: 1px 1px 5px #d49dd4;
+  font-weight: 700;
 }
-.legitimate {
-  color: saddlebrown;
+
+.mainTitle .subtitle {
+  font-size: 22px;
 }
-.verse {
-  color: darkcyan;
+.mainTitle p {
+  text-decoration: underline;
 }
-.verse span {
-  color: darkred;
+.text .subtitle {
+  text-transform: none;
+  text-align: left;
+  font-size: 22px;
+  letter-spacing: 5px;
 }
-.verse_title {
-  color: blueviolet;
+.text {
+  text-transform: capitalize;
+  white-space: nowrap;
 }
-.verse_name {
-  color: crimson;
+.text + * {
+  text-indent: 25px;
 }
+.text a {
+  text-shadow: 1px 1px 5px #d49dd4;
+  font-weight: 700;
+}
+.telega a {
+  text-shadow: 1px 1px 5px #87ceeb;
+  font-weight: 700;
+}
+.text p span {
+  text-transform: uppercase;
+}
+.text p mark {
+  text-decoration: line-through;
+}
+
 .footer {
-  color: gold;
+  text-align: right;
+  color: #ff0000;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.footer a {
+  text-decoration: underline;
+  color: #ffa500;
 }
